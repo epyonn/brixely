@@ -18,7 +18,7 @@ const Landing: React.FC = () => {
     return (
         <div>
             <div className='flex flex-col justify-center h-[300px]' style={{ fontFamily: 'Space Grotesk' }}>
-                <h1 className='text-black text-6xl text-center'>
+                <h1 className='text-black text-6xl text-center' style={{ fontWeight: 'bold'}}>
                     Analyzing hundreds of pages <br />
                     of a home disclosure packet,
                     <span className='text-gradient font-bold'> fast</span>
@@ -47,7 +47,7 @@ const Landing: React.FC = () => {
                       .
                     </p>
                 </div>
-                <div className='flex flex-row justify-center items-center mt-5'>
+                <div className='flex flex-row justify-center items-center m-5'>
                     <button className='flex flex-row justify-center items-center p-2 border rounded-lg w-[140px] h-[40x] bg-black text-white'>
                         Join Waitlist
                         <FaEnvelope className="ml-2 justify-center items-center flex" /> 

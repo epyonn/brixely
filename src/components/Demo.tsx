@@ -1,17 +1,26 @@
 import React from 'react';
 import background from '../assets/purple_background.mp4';
+import Draggable from 'react-draggable';
 
 const Demo: React.FC = () => {  
     return (
-        <div className='flex justify-center items-center w-100 h-[800px] ' style={{overflow: 'hidden' }} >
-            <video 
-                className='w-[90%] h-[100%] object-cover '
-                src={background} 
-                autoPlay 
-                loop 
-                muted 
-                style={{ borderRadius: '20px' }} // Add this line
-            />
+        <div className='relative flex justify-center items-center h-screen'>
+            {/* Container for the video and the draggable div */}
+            <div className='relative w-[90%] h-[90%] overflow-hidden' style={{ borderRadius: '20px' }}>
+                <video 
+                    className='absolute top-0 left-0 w-full h-full object-cover'
+                    src={background} 
+                    autoPlay 
+                    loop 
+                    muted 
+                />
+
+                <Draggable bounds="parent">
+                    <div className='absolute p-4 bg-white rounded-lg shadow-lg' style={{ top: '10%', left: '10%' }}>
+                        <p>Drag me around!</p>
+                    </div>
+                </Draggable>
+            </div>
         </div>
     );
 }
