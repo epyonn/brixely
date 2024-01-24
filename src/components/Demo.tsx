@@ -3,13 +3,9 @@ import background from '../assets/purple_background.mp4';
 import Draggable from 'react-draggable';
 import { BiPaperPlane } from "react-icons/bi";
 
-
-
-
 const Demo: React.FC = () => {  
     return (
         <div className='relative flex justify-center items-center h-screen'>
-            {/* Container for the video and the draggable div */}
             <div className='relative w-[90%] h-[90%] overflow-hidden' style={{ borderRadius: '20px' }}>
                 <video 
                     className='absolute top-0 left-0 w-full h-full object-cover'
@@ -24,11 +20,7 @@ const Demo: React.FC = () => {
                         <span className='flex flex-row justify-content items-center'>
                             <p>Rethink Real Estate</p>
                             <BiPaperPlane />
-
-
                         </span>
-
-
                     </div>
                 </Draggable>
             </div>
