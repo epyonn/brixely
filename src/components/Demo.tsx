@@ -16,7 +16,7 @@ const Demo: React.FC = () => {
                 />
 
                 <Draggable bounds="parent">
-                    <div className='absolute p-4 bg-white rounded-lg shadow-lg' style={{ top: '10%', left: '10%' }}>
+                    <div className='absolute p-4 bg-white rounded-lg shadow-lg w-[400px]' style={{ top: '10%', left: '10%' }}>
                         <p>Drag me around!</p>
                     </div>
                 </Draggable>
