@@ -1,6 +1,9 @@
 import React from 'react';
 import background from '../assets/purple_background.mp4';
 import Draggable from 'react-draggable';
+import { SiMinutemailer } from "react-icons/si";
+
+
 
 const Demo: React.FC = () => {  
     return (
@@ -16,8 +19,14 @@ const Demo: React.FC = () => {
                 />
 
                 <Draggable bounds="parent">
-                    <div className='absolute p-4 bg-white rounded-lg shadow-lg w-[400px]' style={{ top: '10%', left: '10%' }}>
-                        <p>Drag me around!</p>
+                    <div className='absolute p-4 bg-white rounded-lg shadow-lg w-[400px]' style={{ top: '10%', left: '10%', opacity: 0.82 }}>
+                        <span className='flex flex-row justify-content items-center'>
+                            <p>Rethink Real Estate</p>
+                            <SiMinutemailer />
+
+                        </span>
+
+
                     </div>
                 </Draggable>
             </div>
