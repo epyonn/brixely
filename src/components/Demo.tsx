@@ -1,7 +1,8 @@
 import React from 'react';
 import background from '../assets/purple_background.mp4';
 import Draggable from 'react-draggable';
-import { SiMinutemailer } from "react-icons/si";
+import { BiPaperPlane } from "react-icons/bi";
+
 
 
 
@@ -22,7 +23,8 @@ const Demo: React.FC = () => {
                     <div className='absolute p-4 bg-white rounded-lg shadow-lg w-[400px]' style={{ top: '10%', left: '10%', opacity: 0.82 }}>
                         <span className='flex flex-row justify-content items-center'>
                             <p>Rethink Real Estate</p>
-                            <SiMinutemailer />
+                            <BiPaperPlane />
+
 
                         </span>
 
