@@ -22,6 +22,11 @@ const Demo: React.FC = () => {
                             <BiPaperPlane />
                         </span>
                     </div>
+                    <div className='absolute p-4 bg-white rounded-lg shadow-lg w-[400px]'>
+                        <span>
+                            
+                        </span>
+                    </div>
                 </Draggable>
             </div>
         </div>
