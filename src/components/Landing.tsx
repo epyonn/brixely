@@ -47,7 +47,7 @@ const Landing: React.FC = () => {
                       .
                     </p>
                 </div>
-                <div className='flex flex-row justify-center items-center m-5'>
+                <div className='flex flex-row justify-center items-center m-5 bg-black'>
                     <button className='flex flex-row justify-center items-center p-2 border rounded-lg w-[140px] h-[40x] bg-black text-white'>
                         Join Waitlist
                         <FaEnvelope className="ml-2 justify-center items-center flex" /> 

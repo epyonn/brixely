@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 function App() {
   return (
-    <div className="bg-custom-gradient">
+    <div className="bg-custom-gradient h-64 w-full">
       <Header />
       <Landing />
       <Demo />

@@ -4,12 +4,13 @@ module.exports = {
   theme: {
     colors: {
       'blue' : '#ff49db',
-      'custom-gradient': 'linear-gradient(to bottom, #1fb6ff, #7e5bef)'
+
+
 
     },
     extend: {
       backgroundImage: {
-        'custom-gradient': 'linear-gradient(to bottom, #1fb6ff, #7e5bef)'
+        'custom-gradient': 'linear-gradient(to bottom, #D1D3E2 2%, #FFFFFF 90%)'
       }
     },
   },
