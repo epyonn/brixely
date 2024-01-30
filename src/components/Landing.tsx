@@ -17,7 +17,7 @@ const Landing: React.FC = () => {
 
     return (
         <div>
-            <div className='flex flex-col justify-center items-center h-[300px] p' style={{ fontFamily: 'Space Grotesk' }}>
+            <div className='flex flex-col justify-center items-center h-[300px] ' style={{ fontFamily: 'Space Grotesk' }}>
                 {/*<h1 className='text-black text-6xl text-center' style={{ fontWeight: 'bold'}}> */}
                 <div className='prose-xl w-150 text-center '>
                 <h1 style={{ fontWeight: 'bold'}}> 
@@ -49,10 +49,12 @@ const Landing: React.FC = () => {
                       .
                     </p>
                 </div>
-                <div className='flex flex-row justify-center items-center m-5 bg-black'>
-                    <button className='flex flex-row justify-center items-center p-2 border rounded-lg w-[140px] h-[40x] bg-black text-white'>
-                        Join Waitlist
-                        <FaEnvelope className="ml-2 justify-center items-center flex" /> 
+                <div className='flex flex-row justify-center items-center mt-10 '>
+                    <button className='flex flex-row justify-center items-center p-2 border rounded-lg w-[140px] h-[40x]' style={{backgroundColor: 'black'}}>
+                        <span style={{ color: 'white' }}>
+                            Join Waitlist
+                        </span>
+                        <FaEnvelope className="ml-2 justify-center items-center flex"  style={{ color: 'white' }}/> 
                     </button>
                 </div>
 
