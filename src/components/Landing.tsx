@@ -17,17 +17,16 @@ const Landing: React.FC = () => {
 
     return (
         <div>
-            <div className='flex flex-col justify-center items-center h-[300px]' style={{ fontFamily: 'Space Grotesk' }}>
+            <div className='flex flex-col justify-center items-center h-[300px] p' style={{ fontFamily: 'Space Grotesk' }}>
                 {/*<h1 className='text-black text-6xl text-center' style={{ fontWeight: 'bold'}}> */}
-                <div className='prose prose-xl'>
-                <h1 className='' style={{ fontWeight: 'bold'}}> 
+                <div className='prose-xl w-150 text-center '>
+                <h1 style={{ fontWeight: 'bold'}}> 
                     Analyzing hundreds of pages <br />
                     of a home disclosure packet, <span className='text-gradient font-bold'>fast</span>.
                 </h1>
-
                 </div>
 
-                <div className='flex justify-center m-1'>
+                <div className='flex justify-center '>
                     <p className='text-center text-gray-700 text-3xl mr-1'>
                         Your AI assistant trained on property's
                     </p>
