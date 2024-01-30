@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaEnvelope } from 'react-icons/fa';
-
 import '../App.css';
 
 const Landing: React.FC = () => {
@@ -54,7 +53,11 @@ const Landing: React.FC = () => {
                         <span style={{ color: 'white' }}>
                             Join Waitlist
                         </span>
-                        <FaEnvelope className="ml-2 justify-center items-center flex"  style={{ color: 'white' }}/> 
+                        <div className='flex-end'>
+                            <FaEnvelope className="ml-2 justify-center items-center flex"  style={{ color: 'white' }}/> 
+
+                        </div>
+                        
                     </button>
                 </div>
 

@@ -16,10 +16,12 @@ const Demo: React.FC = () => {
                 />
 
                 <Draggable bounds="parent">
-                    <div className='absolute p-4 rounded-lg shadow-lg w-[400px]' style={{ top: '10%', left: '10%', opacity: 0.8, backgroundColor: 'lightgrey' }}>
-                        <span className='flex flex-row justify-content items-center'>
+                    <div className='absolute p-4 rounded-lg shadow-lg w-[400px]' style={{ top: '10%', left: '10%', opacity: 0.8, backgroundColor: 'white' }}>
+                        <span className='flex flex-row justify-between items-center'>
                             <p>Rethink Real Estate</p>
-                            <BiPaperPlane />
+                            <div className='flex-end'>
+                                <BiPaperPlane />
+                            </div>
                         </span>
                     </div>
                 </Draggable>
