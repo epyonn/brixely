@@ -57,7 +57,7 @@ const AnimatedText: React.FC = () => {
     return (
 <div className='flex justify-center'>
     <div className='flex mt-12 pt-8 w-[90%] no-ligatures' style={{ fontFamily: 'Liga-Sans' }}>
-        <h1 ref={ref} className='prose prose-2xl text-7xl'>
+        <h1 ref={ref} className='prose prose-2xl text-6xl'>
             {words.map((word, index) => (
                 <motion.span
                     key={index}
