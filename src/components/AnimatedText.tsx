@@ -1,57 +1,75 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { motion, useViewportScroll } from 'framer-motion';
 import '../App.css';
 
 const AnimatedText: React.FC = () => {
-    const { scrollYProgress } = useViewportScroll();
+    const ref = useRef<HTMLHeadingElement>(null);
+    const { scrollY } = useViewportScroll();
     const [opacities, setOpacities] = useState<number[]>([]);
 
     const text = `Transforming the real estate sector with AI. Brixely empowers firms and legal professionals by aggregating knowledge and simplifying real estate workflows.`;
     const words = text.split(' ');
 
     useEffect(() => {
-        const updateOpacities = () => {
-            const scrollY = scrollYProgress.get();
-            // Calculate opacity for each word based on scroll position
+        const handleScroll = () => {
+            if (!ref.current) return;
+            const elementTop = ref.current.offsetTop;
+            const elementHeight = ref.current.offsetHeight;
+            const viewportHeight = window.innerHeight;
+            const currentScroll = window.scrollY;
+
+            // Extend the endTransition further to ensure more scrolling is required to make all text fully opaque
+            const offset = -800; // Increase or adjust this value based on your layout
+            const startTransition = elementTop - viewportHeight;
+            const endTransition = elementTop + elementHeight + offset;
+
+            // Determine how much of the scroll progress should affect each word, including the additional range for smoother transitions
+            const scrollRangePerWord = (endTransition - startTransition) / words.length;
+
             const newOpacities = words.map((_, index) => {
-                // Divide the scroll range based on the number of words
-                const segmentLength = 1 / words.length;
-                const startOfSegment = segmentLength * index;
-                
-                if (scrollY >= startOfSegment && scrollY < startOfSegment + segmentLength) {
-                    // Calculate opacity based on position within the current segment
-                    const progressInSegment = (scrollY - startOfSegment) / segmentLength;
-                    return Math.min(1, Math.max(0, progressInSegment));
-                } else if (scrollY >= startOfSegment + segmentLength) {
-                    return 1; // Word is fully opaque if we've scrolled past its segment
+                // Calculate start and end scroll positions for each word, adjusting for a more gradual transition
+                const wordStart = startTransition + scrollRangePerWord * index;
+                const wordEnd = wordStart + scrollRangePerWord; // Adjust this range if needed for smoother transitions
+
+                // Adjust opacity based on the word's current scroll position
+                if (currentScroll < wordStart) {
+                    return 0.2; // Before the word starts appearing, it's less opaque
+                } else if (currentScroll >= wordStart && currentScroll <= wordEnd) {
+                    // Calculate opacity based on scroll position within the word's range
+                    const opacityIncrement = (currentScroll - wordStart) / (wordEnd - wordStart);
+                    return 0.2 + (0.8 * opacityIncrement); // Gradually increase opacity
+                } else {
+                    return 1; // Once the scroll is past the word's range, it's fully opaque
                 }
-                return 0; // Word is transparent if we haven't reached its segment
             });
 
             setOpacities(newOpacities);
         };
 
-        const unsubscribe = scrollYProgress.onChange(updateOpacities);
-        updateOpacities(); // Initial update
+        // Initialize opacity
+        handleScroll();
 
-        return () => unsubscribe();
-    }, [scrollYProgress, words.length]);
+        // Add and remove scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [words.length]); // Dependency on words.length ensures recalculation if the text changes
 
     return (
-        <div className='flex mt-12 pt-8 w-4/5 justify-center no-ligatures' style={{ fontFamily: 'Liga-Sans' }}>
-            <h1 className='prose prose-2xl text-7xl'>
-                {words.map((word, index) => (
-                    <motion.span
-                        key={index}
-                        style={{ opacity: opacities[index] ?? 0, display: 'inline-block', marginRight: '8px' }}
-                    >
-                        {word}
-                    </motion.span>
-                ))}
-            </h1>
-        </div>
+<div className='flex justify-center'>
+    <div className='flex mt-12 pt-8 w-[90%] no-ligatures' style={{ fontFamily: 'Liga-Sans' }}>
+        <h1 ref={ref} className='prose prose-2xl text-7xl'>
+            {words.map((word, index) => (
+                <motion.span
+                    key={index}
+                    style={{ opacity: opacities[index] ?? 0.2, display: 'inline-block', marginRight: '8px' }} // Start with initial opacity
+                >
+                    {word}
+                </motion.span>
+            ))}
+        </h1>
+    </div>
+</div>
     );
-}
+};
 
 export default AnimatedText;
-
