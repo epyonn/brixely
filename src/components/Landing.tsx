@@ -16,10 +16,11 @@ const Landing: React.FC = () => {
 
     return (
         <div>
-            <div className='flex flex-col justify-center items-center h-[300px] ' style={{ fontFamily: 'Space Grotesk' }}>
+            <div className='flex flex-col justify-center items-center h-[300px] ' style={{ fontFamily: 'Liga-Sans' }}>
                 {/*<h1 className='text-black text-6xl text-center' style={{ fontWeight: 'bold'}}> */}
                 <div className='prose-xl w-150 text-center '>
-                <h1 style={{ fontWeight: 'bold'}}> 
+                <h1 > 
+                {/* <h1 style={{ fontWeight: 'bold'}}>  */}
                     Analyzing hundreds of pages <br />
                     of a home disclosure packet, <span className='text-gradient font-bold'>fast</span>.
                 </h1>

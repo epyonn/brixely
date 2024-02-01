@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'Liga-Sans';
-  src: url('../public/fonts/LigaSans-Bold.woff') format('truetype');
+  src: url('../public/fonts/LigaSans-Bold.woff2') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -23,4 +23,8 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.no-ligatures {
+  font-variant-ligatures: no-common-ligatures;
 }
