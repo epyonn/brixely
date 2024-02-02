@@ -14,17 +14,27 @@ const Demo: React.FC = () => {
                     loop 
                     muted 
                 />
+<Draggable>
+    <div className='flex flex-col space-y-4 w-full h-full object-cover'>
+        <div className='p-4 rounded-lg shadow-lg w-[400px]' style={{ opacity: 0.8, backgroundColor: 'white' }}>
+            <span className='flex flex-row justify-between items-center'>
+                <p>Rethink Real Estate</p>
+                <div className='flex-end'>
+                    <BiPaperPlane />
+                </div>
+            </span>
+        </div>
+        <div className='p-4 rounded-lg shadow-lg w-[400px]' style={{ opacity: 0.8, backgroundColor: 'white' }}>
+            <span className='flex flex-row justify-between items-center'>
+                <p>Rethink Real Estate</p>
+                <div className='flex-end'>
+                    <BiPaperPlane />
+                </div>
+            </span>
+        </div>
+    </div>
+</Draggable>
 
-                <Draggable bounds="parent">
-                    <div className='absolute p-4 rounded-lg shadow-lg w-[400px]' style={{ top: '10%', left: '10%', opacity: 0.8, backgroundColor: 'white' }}>
-                        <span className='flex flex-row justify-between items-center'>
-                            <p>Rethink Real Estate</p>
-                            <div className='flex-end'>
-                                <BiPaperPlane />
-                            </div>
-                        </span>
-                    </div>
-                </Draggable>
 
             </div>
         </div>
