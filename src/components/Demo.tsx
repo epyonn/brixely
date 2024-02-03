@@ -14,7 +14,9 @@ const Demo: React.FC = () => {
                     loop 
                     muted 
                 />
-        <Draggable>
+        <Draggable
+            defaultPosition = {{ x: 100, y: 100}}
+        >
             <div className='flex flex-col space-y-4 w-full h-full object-cover'>
                 <div className='p-4 rounded-lg shadow-lg w-[800px]' style={{ opacity: 0.8, backgroundColor: 'white' }}>
                     <span className='flex flex-row justify-between items-center'>

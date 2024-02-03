@@ -8,6 +8,7 @@ const AnimatedText: React.FC = () => {
     const [opacities, setOpacities] = useState<number[]>([]);
 
     const text = `Transforming the real estate sector with AI. Brixely empowers firms and legal professionals by aggregating knowledge and simplifying real estate workflows.`;
+    //const text = `Designed for Real Estate Agents, Brokers & Investors to save you hours.`;
     const words = text.split(' ');
 
     useEffect(() => {
@@ -55,20 +56,20 @@ const AnimatedText: React.FC = () => {
     }, [words.length]); // Dependency on words.length ensures recalculation if the text changes
 
     return (
-<div className='flex justify-center'>
-    <div className='flex mt-12 pt-8 w-[90%] no-ligatures' style={{ fontFamily: 'Liga-Sans' }}>
-        <h1 ref={ref} className='prose prose-2xl text-6xl'>
-            {words.map((word, index) => (
-                <motion.span
-                    key={index}
-                    style={{ opacity: opacities[index] ?? 0.2, display: 'inline-block', marginRight: '8px' }} // Start with initial opacity
-                >
-                    {word}
-                </motion.span>
-            ))}
-        </h1>
-    </div>
-</div>
+        <div className='flex ml-12 pl-9'>
+            <div className='flex mt-12 pt-8 w-[60%] no-ligatures' style={{ fontFamily: 'Liga-Sans' }}>
+                <h1 ref={ref} className='prose prose-2xl text-6xl'>
+                    {words.map((word, index) => (
+                        <motion.span
+                            key={index}
+                            style={{ opacity: opacities[index] ?? 0.2, display: 'inline-block', marginRight: '8px' }} // Start with initial opacity
+                        >
+                            {word}
+                        </motion.span>
+                    ))}
+                </h1>
+            </div>
+        </div>
     );
 };
 
