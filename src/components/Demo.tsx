@@ -1,10 +1,31 @@
 
+"use client";
 import React from 'react';
 import background from '../assets/purple_background.mp4';
 import Draggable from 'react-draggable';
 import { BiPaperPlane } from "react-icons/bi";
+import { TypewriterEffectSmooth } from './ui/typewriter-effect';
 
 const Demo: React.FC = () => {  
+    const words = [
+        {
+            text: 'Rethink',
+            className: 'prose prose-sm text-sm',
+
+        },
+        {
+            text: 'Real',
+            className: 'prose prose-sm text-sm',
+
+        },
+        {
+            text: 'Estate',
+            className: 'prose prose-sm text-sm',
+
+        }
+    ];
+
+
     return (
         <div className='relative flex justify-center items-center h-[800px]'>
             <div className='relative w-[90%] h-[100%] overflow-hidden' style={{ borderRadius: '20px' }}>
@@ -21,7 +42,7 @@ const Demo: React.FC = () => {
             <div className='flex flex-col space-y-4 w-full h-full object-cover'>
                 <div className='p-4 rounded-lg shadow-lg w-[800px]' style={{ opacity: 0.8, backgroundColor: 'white' }}>
                     <span className='flex flex-row justify-between items-center'>
-                        <p>Rethink Real Estate</p>
+                        <TypewriterEffectSmooth words={words} />
                         <div className='flex-end rounded-lg p-1.5' style={{ backgroundColor: '#DADADA', }}>
                             <div style={{ color: 'black', opacity: 1 }} >
                                 <BiPaperPlane style={{ opacity: 1 }} />
