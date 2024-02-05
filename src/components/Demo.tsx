@@ -5,26 +5,26 @@ import background from '../assets/purple_background.mp4';
 import Draggable from 'react-draggable';
 import { BiPaperPlane } from "react-icons/bi";
 import { TypewriterEffectSmooth } from './ui/typewriter-effect';
+import '../App.css';
 
 const Demo: React.FC = () => {  
     const words = [
         {
             text: 'Rethink',
-            className: 'prose prose-sm text-sm',
+            className: 'text-xl'
 
         },
         {
             text: 'Real',
-            className: 'prose prose-sm text-sm',
+            className: 'text-xl'
 
         },
         {
             text: 'Estate',
-            className: 'prose prose-sm text-sm',
+            className: 'text-xl'
 
         }
     ];
-
 
     return (
         <div className='relative flex justify-center items-center h-[800px]'>
@@ -39,17 +39,20 @@ const Demo: React.FC = () => {
         <Draggable
             defaultPosition = {{ x: 100, y: 100}}
         >
-            <div className='flex flex-col space-y-4 w-full h-full object-cover'>
-                <div className='p-4 rounded-lg shadow-lg w-[800px]' style={{ opacity: 0.8, backgroundColor: 'white' }}>
-                    <span className='flex flex-row justify-between items-center'>
-                        <TypewriterEffectSmooth words={words} />
-                        <div className='flex-end rounded-lg p-1.5' style={{ backgroundColor: '#DADADA', }}>
-                            <div style={{ color: 'black', opacity: 1 }} >
-                                <BiPaperPlane style={{ opacity: 1 }} />
-                            </div>
-                        </div>
+            <div className='flex flex-col space-y-3 w-full h-full object-cover'>
 
-                    </span>
+                {/*<div className='p-4 rounded-lg shadow-lg w-[800px]' style={{ opacity: 0.8, backgroundColor: 'white' }}> */}
+                <div className='rounded-lg shadow-lg w-[800px] h-[70px] align-items justify-content' style={{ opacity: 0.8, backgroundColor: 'white' }}> 
+                    <div className='flex flex-row justify-between items-center h-full p-3' >   
+                        <TypewriterEffectSmooth words={words}  />
+
+                    <div className='flex-end rounded-lg p-1.5 ' style={{ backgroundColor: '#DADADA', }}>
+                        <div style={{ color: 'black', opacity: 1 }} >
+                            <BiPaperPlane style={{ opacity: 1 }} />
+                        </div>
+                    </div>
+                    </div>
+
                 </div>
                 <div className='p-4 rounded-lg shadow-lg w-[800px]' style={{ opacity: 0.8, backgroundColor: 'white' }}>
                     <span className='flex flex-row justify-between items-center'>

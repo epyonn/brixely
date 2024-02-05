@@ -28,3 +28,8 @@
 .no-ligatures {
   font-variant-ligatures: no-common-ligatures;
 }
+
+
+.no-prose-padding p {
+  padding: 0;
+}
