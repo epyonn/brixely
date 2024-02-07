@@ -19,10 +19,10 @@ const Description: React.FC = () => {
 
 
     return (
-        <div className='flex flex-row w-[100] align-items justify-content'>
+        <div className='flex flex-row w-[100%] mt-12 justify-center items-center mx-auto no-ligatures' style ={{fontFamily: 'Liga-Sans'}}>
             {steps.map((step, i) => {
                 return (
-                    <div>
+                    <div key={i} className='prose prose-base w-[300px] h-[500px] m-10'>
                         <h1>{step.title}</h1>
                         <p>{step.description}</p>
                     </div>
@@ -32,3 +32,5 @@ const Description: React.FC = () => {
         </div>
     )
 }
+
+export default Description;

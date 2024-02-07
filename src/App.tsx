@@ -7,6 +7,7 @@ import AnimatedText from './components/AnimatedText';
 import './App.css';
 import { motion } from 'framer-motion';
 import Large from './components/Large';
+import Description from './components/Description';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Landing />
       <Demo />
       <AnimatedText />
-      <Large  />
+      <Description />
     </div>
   );
 }
