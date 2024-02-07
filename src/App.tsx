@@ -18,7 +18,7 @@ function App() {
       <Demo />
       <AnimatedText />
       <Description />
-      <BackgroundGradientDemo />
+
     </div>
   );
 }

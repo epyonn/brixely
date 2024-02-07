@@ -1,16 +1,14 @@
-"use client"
+"use client";
 import React from "react";
 import { BackgroundGradient } from "./ui/background-gradient";
-import { IconAppWindow } from '@tabler/icons-react';
-
+import "../App.css";
 
 export function BackgroundGradientDemo() {
   return (
-    <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 overflow-hidden relative">
-      {/* Wrapper to simulate the border effect with padding */}
-      <div className="relative bg-white dark:bg-zinc-900 rounded-[22px]">
-        {/* Your actual content */}
-        <div className='p-4 sm:p-10'> {/* Adjust padding as necessary */}
+    <div className="gradient-border-wrapper">
+      <BackgroundGradient className="rounded-[22px] max-w-sm p-1 sm:p-1">
+        <div className="bg-white dark:bg-zinc-900 p-4 rounded-[20px]"> {/* Adjust padding and rounded corners as needed */}
+          {/* All content goes here ensuring it's within a white background */}
           <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
             Air Jordan 4 Retro Reimagined
           </p>
@@ -26,7 +24,7 @@ export function BackgroundGradientDemo() {
             </span>
           </button>
         </div>
-      </div>
-    </BackgroundGradient>
+      </BackgroundGradient>
+    </div>
   );
 }
