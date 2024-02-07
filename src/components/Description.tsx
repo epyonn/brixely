@@ -20,7 +20,14 @@ const Description: React.FC = () => {
 
     return (
         <div className='flex flex-row w-[100] align-items justify-content'>
-            {}
+            {steps.map((step, i) => {
+                return (
+                    <div>
+                        <h1>{step.title}</h1>
+                        <p>{step.description}</p>
+                    </div>
+                )
+            })}
 
         </div>
     )
