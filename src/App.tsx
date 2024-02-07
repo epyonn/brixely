@@ -8,6 +8,7 @@ import './App.css';
 import { motion } from 'framer-motion';
 import Large from './components/Large';
 import Description from './components/Description';
+import { BackgroundGradientDemo } from './components/BackgroundGradientDemo';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Demo />
       <AnimatedText />
       <Description />
+      <BackgroundGradientDemo />
     </div>
   );
 }

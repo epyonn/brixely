@@ -1,4 +1,6 @@
 import React from 'react';
+import { BackgroundGradient } from './ui/background-gradient';
+import '../App.css';
 
 const Description: React.FC = () => {
     const steps = [
@@ -16,16 +18,17 @@ const Description: React.FC = () => {
         }
     ]
 
-
-
     return (
         <div className='flex flex-row w-[100%] mt-12 justify-center items-center mx-auto no-ligatures' style ={{fontFamily: 'Liga-Sans'}}>
             {steps.map((step, i) => {
                 return (
+                    <BackgroundGradient>
+
                     <div key={i} className='prose prose-base w-[300px] h-[500px] m-10'>
                         <h1>{step.title}</h1>
                         <p>{step.description}</p>
                     </div>
+                    </BackgroundGradient>
                 )
             })}
 
