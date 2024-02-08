@@ -34,18 +34,8 @@
   padding: 0;
 }
 
-
-.gradient-border-wrapper {
-  /* Your styles for the wrapper */
-}
-
 /* Ensuring white background for content */
 .bg-white {
   background-color: white; /* Explicitly setting the background color */
 }
 
-.dark:bg-zinc-900 {
-  @media (prefers-color-scheme: dark) {
-    background-color: #1A202C; /* Example dark mode background color */
-  }
-}
