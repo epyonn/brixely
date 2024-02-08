@@ -25,7 +25,7 @@ const Description: React.FC = () => {
             title: 'Close the Deal',
             description: 'Built-in intelligent checklist evaluates for risks to help you make timely decisions for yourself or your clients.'
         }
-    ];
+    ]
 
     return (
         <div className='flex flex-row w-full mt-12 justify-center items-center mx-auto no-ligatures' style={{fontFamily: 'Liga-Sans'}}>
@@ -33,15 +33,12 @@ const Description: React.FC = () => {
                 <div className='m-10'>
                     <BackgroundGradient className="rounded-[22px] w-[350px] min-w-[100px] min-h-[200px] sm:p-0">
                         <div className="bg-white dark:bg-zinc-900 p-4 rounded-[20px] min-w-[100px] min-h-[200px]">
-                            <div className='text-2xl'>
-                                {step.icon}
-                            </div>
-                            
+                            {/* Use text size utilities directly for the title. Adjust the size as needed */}
                             <p className="text-2xl sm:text-3xl lg:text-3xl text-black mt-4 mb-2 dark:text-neutral-200">
                                {step.title}
                             </p>
-
-                            <p className="text-sm lg:text-base ">
+                            {/* Keep the description text smaller for readability */}
+                            <p className="text-sm lg:text-base text-neutral-600 dark:text-neutral-400">
                                 {step.description}
                             </p>
                         </div>
@@ -49,7 +46,7 @@ const Description: React.FC = () => {
                 </div>
             ))}
         </div>
-    );
+    )
 }
 
 export default Description;
