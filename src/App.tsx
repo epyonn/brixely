@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import Large from './components/Large';
 import Description from './components/Description';
 import { BackgroundGradientDemo } from './components/BackgroundGradientDemo';
+import { cn } from "./utils/cn";
 
 function App() {
   return (
