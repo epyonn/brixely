@@ -6,13 +6,14 @@ import { cn } from "../utils/cn";
 export function Waitlist() {
   return (
     <div className="h-screen m-10 relative flex flex-col self-center items-center justify-center antialiased rounded-lg " style={{backgroundColor:'black'}}>
-      <div className="max-w-2xl mx-auto p-4">        <h1 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-white bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
+      <div className="max-w-2xl mx-auto p-4 text-white-900">        
+        <h1 className="text-white-900 relative z-10 text-lg md:text-7xl bg-clip-text text-white bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold" style={{ color: 'white' }}>
 
           Join the waitlist
         </h1>
         <p></p>
-        <p className="text-white-900 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
-          Welcome to MailJet, the best transactional email service on the web.
+        <p className="max-w-lg mx-auto my-2 text-sm text-center relative z-10"  style={{ color: 'white' }}>
+            Welcome to MailJet, the best transactional email service on the web.
           We provide reliable, scalable, and customizable email solutions for
           your business. Whether you&apos;re sending order confirmations,
           password reset emails, or promotional campaigns, MailJet has got you
