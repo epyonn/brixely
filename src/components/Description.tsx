@@ -34,6 +34,7 @@ const Description: React.FC = () => {
                     <BackgroundGradient className="rounded-[22px] w-[350px] min-w-[100px] min-h-[200px] sm:p-0">
                         <div className="bg-white dark:bg-zinc-900 p-4 rounded-[20px] min-w-[100px] min-h-[200px]">
                             {/* Use text size utilities directly for the title. Adjust the size as needed */}
+                            {step.icon}
                             <p className="text-2xl sm:text-3xl lg:text-3xl text-black mt-4 mb-2 dark:text-neutral-200">
                                {step.title}
                             </p>
