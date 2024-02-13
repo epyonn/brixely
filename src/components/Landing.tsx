@@ -16,7 +16,7 @@ const Landing: React.FC = () => {
 
     return (
         <div>
-            <div className='flex flex-col justify-center items-center h-[300px] ' style={{ fontFamily: 'Liga-Sans' }}>
+            <div className='flex flex-col justify-center items-center h-[300px]' >
                 <div className='prose-2xl w-150 text-center '>
                 <h1 > 
                     Analyzing hundreds of pages <br />

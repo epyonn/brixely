@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header: React.FC = () => {
     return (
-        <header className='flex justify-between items-center h-[100px] px-20 py-8' style={{ fontFamily: 'Liga-Sans' }}>
+        <header className='flex justify-between items-center h-[100px] px-20 py-8' >
             <div className='text-black text-3xl'>
                 <h1> Brixely </h1>
             </div>
