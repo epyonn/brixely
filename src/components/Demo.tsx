@@ -40,8 +40,6 @@ const Demo: React.FC = () => {
             defaultPosition = {{ x: 100, y: 100}}
         >
             <div className='flex flex-col space-y-3 w-full h-full object-cover'>
-
-                {/*<div className='p-4 rounded-lg shadow-lg w-[800px]' style={{ opacity: 0.8, backgroundColor: 'white' }}> */}
                 <div className='rounded-lg shadow-lg w-[800px] h-[70px] align-items justify-content' style={{ opacity: 0.8, backgroundColor: 'white' }}> 
                     <div className='flex flex-row justify-between items-center h-full p-3' >   
                         <TypewriterEffectSmooth words={words}  />

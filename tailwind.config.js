@@ -7,13 +7,13 @@ module.exports = {
   darkMode: "class",
 
   theme: {
-    colors: {
-      'blue' : '#ff49db',
-    },
+
     extend: {
       backgroundImage: {
-        'custom-gradient': 'linear-gradient(to bottom, #D1D3E2 2%, #FFFFFF 90%)'
+        'custom-gradient': 'linear-gradient(to bottom, #D1D3E2 2%, #FFFFFF 90%)',
+        
       },
+      
 
     },
   },

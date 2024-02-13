@@ -6,9 +6,10 @@ const Header: React.FC = () => {
             <div className='text-black text-3xl'>
                 <h1> Brixely </h1>
             </div>
-            <div className='text-black text-xl border p-1 rounded-lg'>
+            <div className='text-black text-xl border border-black p-1 rounded-lg'>
                 <span> Log In </span>
             </div>
+            
             
         </header>
     );
