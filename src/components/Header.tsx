@@ -7,7 +7,11 @@ const Header: React.FC = () => {
                 <h1> Brixely </h1>
             </div>
             <div className='text-black text-xl border border-black p-1 rounded-lg font-extrabold'>
-                <span> Log In </span>
+            
+                <a href="https://app.brixely.com">
+                Login
+                </a>
+
             </div>
         </header>
     );
