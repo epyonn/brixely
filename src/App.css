@@ -48,11 +48,6 @@ body {
 }
 
 
-.gradient-border-wrapper {
-  /* Your styles for the wrapper */
-}
-
-/* Ensuring white background for content */
 .bg-white {
   background-color: white; /* Explicitly setting the background color */
 }

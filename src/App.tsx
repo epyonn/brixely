@@ -4,11 +4,15 @@ import Header from './components/Header';
 import Landing from './components/Landing';
 import Demo from './components/Demo';
 import AnimatedText from './components/AnimatedText'; 
-import './App.css';
-import { motion } from 'framer-motion';
+import Waitlist from './components/Waitlist';
 import Description from './components/Description';
+import Footer from './components/Footer';
+import { motion } from 'framer-motion';
 import { BackgroundGradientDemo } from './components/BackgroundGradientDemo';
-import { Waitlist } from './components/Waitlist';
+import './App.css';
+
+
+
 
 function App() {
   return (
@@ -19,6 +23,7 @@ function App() {
       <AnimatedText />
       <Description />
       <Waitlist />
+      <Footer />
 
     </div>
   );
