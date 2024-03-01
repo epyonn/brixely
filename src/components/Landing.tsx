@@ -10,7 +10,7 @@ interface LandingProps {
 
 const Landing: React.FC<LandingProps> = ({ scrollToWaitlist }) => {
     const [text, setText] = useState("inspections");
-    const waitlistRef = useRef(null);
+
 
     useEffect(() => {
         const interval = setInterval(() => {
