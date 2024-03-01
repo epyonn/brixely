@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaEnvelope } from 'react-icons/fa';
 import '../App.css';
 
-const Landing: React.FC = () => {
+interface LandingProps {
+    scrollToWaitlist: () => void;
+}
+
+
+const Landing: React.FC<LandingProps> = ({ scrollToWaitlist }) => {
     const [text, setText] = useState("inspections");
+    const waitlistRef = useRef(null);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -48,7 +54,11 @@ const Landing: React.FC = () => {
                     </p>
                 </div>
                 <div className='flex flex-row justify-center items-center mt-10 '>
-                    <button className='flex flex-row justify-center items-center p-2 border rounded-lg w-[140px] h-[40x]' style={{backgroundColor: 'black'}}>
+                    <button 
+                    className='flex flex-row justify-center items-center p-2 border rounded-lg w-[140px] h-[40x]' 
+                    style={{backgroundColor: 'black'}}
+                    onClick={scrollToWaitlist} // Use the prop here
+                    >                        
                         <span style={{ color: 'white' }}>
                             Join Waitlist
                         </span>

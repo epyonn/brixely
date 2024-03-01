@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import logo from './logo.svg';
 import Header from './components/Header';
 import Landing from './components/Landing';
@@ -11,18 +11,21 @@ import { motion } from 'framer-motion';
 import { BackgroundGradientDemo } from './components/BackgroundGradientDemo';
 import './App.css';
 
-
-
-
 function App() {
+  const waitlistRef = useRef<HTMLDivElement>(null);
+
+  const scrollToWaitlist = () => {
+    waitlistRef.current?.scrollIntoView({ behavior: 'smooth'});
+  }
+
   return (
     <div className="bg-custom-gradient h-64 w-full">
       <Header />
-      <Landing />
+      <Landing scrollToWaitlist={scrollToWaitlist} />
       <Demo />
       <AnimatedText />
       <Description />
-      <Waitlist />
+      <Waitlist ref={waitlistRef}/>
       <Footer />
 
     </div>
